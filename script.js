@@ -16,6 +16,13 @@ window.addEventListener('scroll', function() {
     });
 });
 
+document.querySelectorAll('.project-item, .skill-item').forEach(item => {
+    item.addEventListener('click', function() {
+        const info = this.getAttribute('data-info');
+        document.getElementById('info-content').textContent = info;
+    });
+});
+
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
