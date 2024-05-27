@@ -22,3 +22,7 @@ document.querySelectorAll('.project-item, .skill-item').forEach(item => {
         document.getElementById('info-content').textContent = info;
     });
 });
+
+document.getElementById('intro-screen').addEventListener('click', function() {
+    this.classList.add('hidden');
+});
