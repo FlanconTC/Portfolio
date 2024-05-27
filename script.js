@@ -9,7 +9,7 @@ window.addEventListener('scroll', function() {
     document.body.style.backgroundColor = `rgb(${bodyBackground}, ${bodyBackground}, ${bodyBackground})`;
     document.body.style.color = `rgb(${textColor}, ${textColor}, ${textColor})`;
 
-    const sections = document.querySelectorAll('section, header, footer, .project-item, .skill-item, form input, form textarea, form button');
+    const sections = document.querySelectorAll('section, header, footer, .project-item, .skill-item');
     sections.forEach(section => {
         section.style.backgroundColor = `rgb(${bodyBackground}, ${bodyBackground}, ${bodyBackground})`;
         section.style.color = `rgb(${textColor}, ${textColor}, ${textColor})`;
