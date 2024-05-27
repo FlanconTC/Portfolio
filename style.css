@@ -57,12 +57,37 @@ section h2 {
     padding: 0;
 }
 
-.projects-list li, .skills-list li {
-    background: #e4e4e4;
+.project-item, .skill-item {
+    display: flex;
+    align-items: center;
     margin: 10px 0;
     padding: 20px;
     border-radius: 8px;
+    background: #e4e4e4;
     transition: background-color 0.5s, color 0.5s;
+}
+
+.project-item img, .skill-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.project-item.left img, .skill-item.left img {
+    order: 1;
+}
+
+.project-item.left .project-info, .skill-item.left .skill-info {
+    order: 2;
+}
+
+.project-item.right img, .skill-item.right img {
+    order: 2;
+}
+
+.project-item.right .project-info, .skill-item.right .skill-info {
+    order: 1;
 }
 
 form {
@@ -94,5 +119,3 @@ footer {
     padding: 10px 0;
     transition: background-color 0.5s, color 0.5s;
 }
-
-/* JavaScript to handle scrolling */
