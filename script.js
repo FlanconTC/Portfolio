@@ -1,3 +1,21 @@
+window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollFraction = scrollTop / maxScroll;
+
+    const bodyBackground = 255 - Math.min(255, Math.floor(scrollFraction * 255));
+    const textColor = Math.min(255, Math.floor(scrollFraction * 255));
+
+    document.body.style.backgroundColor = `rgb(${bodyBackground}, ${bodyBackground}, ${bodyBackground})`;
+    document.body.style.color = `rgb(${textColor}, ${textColor}, ${textColor})`;
+
+    const sections = document.querySelectorAll('section, header, footer, .projects-list li, .skills-list li, form input, form textarea, form button');
+    sections.forEach(section => {
+        section.style.backgroundColor = `rgb(${bodyBackground}, ${bodyBackground}, ${bodyBackground})`;
+        section.style.color = `rgb(${textColor}, ${textColor}, ${textColor})`;
+    });
+});
+
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
