@@ -93,6 +93,10 @@ nav ul li a {
     overflow-y: auto;
 }
 
+#info-panel {
+    color: #333; /* Ensures the text color in the right column does not change */
+}
+
 section {
     padding: 20px 0;
     background: #fff;
