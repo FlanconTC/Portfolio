@@ -18,8 +18,13 @@ window.addEventListener('scroll', function() {
 
 document.querySelectorAll('.project-item, .skill-item').forEach(item => {
     item.addEventListener('click', function() {
-        const info = this.getAttribute('data-info');
-        document.getElementById('info-content').textContent = info;
+        const url = this.getAttribute('data-url');
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('info-content').innerHTML = data;
+            })
+            .catch(error => console.error('Error fetching the HTML file:', error));
     });
 });
 
