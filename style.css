@@ -50,12 +50,12 @@ section h2 {
     color: #333;
 }
 
-.projects-list {
+.projects-list, .skills-list {
     list-style: none;
     padding: 0;
 }
 
-.projects-list li {
+.projects-list li, .skills-list li {
     background: #e4e4e4;
     margin: 10px 0;
     padding: 20px;
