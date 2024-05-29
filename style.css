@@ -139,3 +139,25 @@ footer {
     padding: 10px 0;
     transition: background-color 0.5s, color 0.5s;
 }
+
+.content {
+    padding: 20px;
+}
+
+.large-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content ul li {
+    background: #e4e4e4;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
