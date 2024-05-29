@@ -4,7 +4,7 @@ window.addEventListener('scroll', function() {
     const scrollFraction = scrollTop / maxScroll;
 
     const bodyBackground = 244 - Math.min(244, Math.floor(scrollFraction * 100));
-    const textColor = 0 + Math.min(100, Math.floor(scrollFraction * 100));
+    const textColor = Math.min(255, Math.floor(scrollFraction * 255));
 
     document.body.style.backgroundColor = `rgb(${bodyBackground}, ${bodyBackground}, ${bodyBackground})`;
     document.body.style.color = `rgb(${textColor}, ${textColor}, ${textColor})`;
